@@ -1,3 +1,11 @@
 ## Parse Nginx Exercise
 
 In this exercise, a custom container based on nginx 1.29 is used, to which the following files are added: index.html, index.png, and structure.png to a directory called cwd that hangs from the nginx home directory.
+
+This container listens on port 8080 and also mounts the nginx logs directory to a local directory called nginx-logs.
+
+A Python 3 script is included to parse the access.log file, as described in the exercise. This script does not use any special libraries.
+
+How to use: python3 parser.py ./nginx-logs/access.log
+
+Tested with Python 3.9.x and Python 3.13.x
