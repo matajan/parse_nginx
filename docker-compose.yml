@@ -1,0 +1,8 @@
+services:
+  nginx:
+    image: mynginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx-logs:/var/log/nginx
+    restart: unless-stopped
